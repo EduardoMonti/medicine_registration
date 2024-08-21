@@ -4,15 +4,16 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "tb_medicines")
-public class medicines {
+public class Medicines {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private int quantity;
+    private String description;
 
-    public medicines(){
+    public Medicines(){
 
     }
 
@@ -38,5 +39,13 @@ public class medicines {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
